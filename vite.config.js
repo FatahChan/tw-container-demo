@@ -21,5 +21,5 @@ export default defineConfig({
 			"@": resolve(__dirname, "./src"),
 		},
 	},
-	base: "/tw-container-demo",
+	base: process.env.VITE_BASE_PATH || "/",
 });

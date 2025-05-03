@@ -51,7 +51,8 @@ jobs:
 
       - name: Build
         run: pnpm build
-        
+        env:
+          VITE_BASE_PATH: ${{ env.VITE_BASE_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
