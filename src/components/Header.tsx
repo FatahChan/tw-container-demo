@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Github, Star, StarOff } from "lucide-react";
+import { Github, Star } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 
