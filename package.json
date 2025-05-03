@@ -10,7 +10,7 @@
     "test": "vitest run",
     "format": "biome format",
     "lint": "biome lint",
-    "check": "biome check"
+    "check": "biome check --fix"
   },
   "dependencies": {
     "@radix-ui/react-collapsible": "^1.1.8",
@@ -37,6 +37,7 @@
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
     "jsdom": "^26.0.0",
+    "lefthook": "^1.11.12",
     "typescript": "^5.7.2",
     "vite": "^6.1.0",
     "vitest": "^3.0.5",

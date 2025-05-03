@@ -8,37 +8,43 @@ export const Route = createFileRoute("/")({
 function ContainerDemo() {
   return (
     <div className="min-h-screen bg-background p-8">
-      <h1 className="mb-8 text-3xl font-bold">Container Query Demo</h1>
-      
+      <h1 className="mb-8 font-bold text-3xl">Container Query Demo</h1>
+
       <div className="space-y-8">
         {/* Small container */}
         <section>
-          <h2 className="mb-4 text-xl font-semibold">Small Container (300px)</h2>
-          <div className="w-[300px] border border-dashed border-muted-foreground p-4">
+          <h2 className="mb-4 font-semibold text-xl">
+            Small Container (300px)
+          </h2>
+          <div className="w-[300px] border border-muted-foreground border-dashed p-4">
             <ProductCard />
           </div>
         </section>
 
         {/* Medium container */}
         <section>
-          <h2 className="mb-4 text-xl font-semibold">Medium Container (500px)</h2>
-          <div className="w-[500px] border border-dashed border-muted-foreground p-4">
+          <h2 className="mb-4 font-semibold text-xl">
+            Medium Container (500px)
+          </h2>
+          <div className="w-[500px] border border-muted-foreground border-dashed p-4">
             <ProductCard />
           </div>
         </section>
 
         {/* Large container */}
         <section>
-          <h2 className="mb-4 text-xl font-semibold">Large Container (800px)</h2>
-          <div className="w-[800px] border border-dashed border-muted-foreground p-4">
+          <h2 className="mb-4 font-semibold text-xl">
+            Large Container (800px)
+          </h2>
+          <div className="w-[800px] border border-muted-foreground border-dashed p-4">
             <ProductCard />
           </div>
         </section>
 
         {/* Full width container */}
         <section>
-          <h2 className="mb-4 text-xl font-semibold">Full Width Container</h2>
-          <div className="border border-dashed border-muted-foreground p-4">
+          <h2 className="mb-4 font-semibold text-xl">Full Width Container</h2>
+          <div className="border border-muted-foreground border-dashed p-4">
             <ProductCard />
           </div>
         </section>
