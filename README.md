@@ -1,4 +1,98 @@
-Welcome to your new TanStack app! 
+# Tailwind Container Query Demo
+
+This project demonstrates the power of Tailwind CSS v4's container queries feature, showcasing how components can adapt based on their container's size rather than just the viewport size.
+
+## Features
+
+### 1. Basic Container Query Demo (`/`)
+Demonstrates how a single component (ProductCard) adapts to different container sizes:
+- Shows the same component in different fixed-width containers
+- Visualizes breakpoint changes with dashed borders
+- Helps understand container query behavior in isolation
+
+### 2. Responsive Grid with Collapsible Navigation (`/responsive-grid`)
+Shows a real-world implementation combining container queries with responsive design:
+
+#### Navigation
+- Collapsible side navigation that affects layout
+- Uses named container queries (`@container/page`) for responsive behavior
+- Collapses to icon-only view on small containers
+- Full-width mobile view with smooth transitions
+
+#### Product Grid
+- Responsive grid using container queries:
+  - Hidden below `@[15rem]`
+  - Single column by default
+  - 2 columns at `@3xl`
+  - 3 columns at `@5xl`
+  - 4 columns at `@7xl`
+- Grid adjusts based on available space when navigation is toggled
+
+#### Product Card Component
+- Uses container queries for adaptive layout:
+  - Vertical layout by default (image top, content bottom)
+  - Horizontal layout at `@lg` breakpoint (image left, content right)
+- Maintains consistent spacing and proportions
+- Built with shadcn/ui components for a polished look
+
+## Tech Stack
+
+- React 19
+- Vite
+- TanStack Router
+- Tailwind CSS v4
+- shadcn/ui
+- TypeScript
+
+## Container Query Examples
+
+### Basic Container Query
+```tsx
+<div className="@container">
+  <div className="flex flex-col @lg:flex-row">
+    {/* Content adapts based on container width */}
+  </div>
+</div>
+```
+
+### Named Container Query
+```tsx
+<div className="@container/page">
+  <div className="w-screen @sm/page:w-[240px]">
+    {/* Content adapts based on named container */}
+  </div>
+</div>
+```
+
+### Container Query Breakpoints
+```tsx
+<div className="grid-cols-1 
+  @3xl:grid-cols-2 
+  @5xl:grid-cols-3 
+  @7xl:grid-cols-4">
+  {/* Grid columns adapt based on container size */}
+</div>
+```
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+3. Start the development server:
+   ```bash
+   pnpm dev
+   ```
+4. Visit http://localhost:3000
+
+## Key Learnings
+
+1. Container queries are perfect for reusable components that need to adapt to their available space
+2. Named container queries allow for more complex responsive patterns
+3. Combining container queries with traditional responsive design creates more flexible layouts
+4. Container queries work well with CSS Grid and Flexbox for dynamic layouts
 
 # Getting Started
 

@@ -33,9 +33,9 @@ function ResponsiveGrid() {
 			>
 				<div className="p-4 border-b flex items-center justify-between">
 					<Button
-						variant="ghost"
+						variant="outline"
             size="icon"
-            className={cn("w-full flex justify-between", {"justify-center": isCollapsed})}
+            className={cn("w-full flex justify-between px-2", {"justify-center": isCollapsed})}
 						onClick={() => setIsCollapsed(!isCollapsed)}
 					>
 						<span className={isCollapsed ? "hidden" : "font-semibold"}>
