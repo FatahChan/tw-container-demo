@@ -38,7 +38,10 @@ export default function Header() {
 					<Github className="h-4 w-4" />
 					<span>Star</span>
 					<div className="w-px h-4 bg-border mx-1" />
-					<span className="font-semibold flex gap-1 justify-center items-center"><Star/>{stars ?? "–"}</span>
+					<span className="font-semibold flex gap-1 justify-center items-center">
+						<Star />
+						{stars ?? "–"}
+					</span>
 				</a>
 			</Button>
 		</header>
