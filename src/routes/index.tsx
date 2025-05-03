@@ -1,39 +1,48 @@
 import { createFileRoute } from "@tanstack/react-router";
-import logo from "../logo.svg";
+import { ProductCard } from "../components/ProductCard";
 
 export const Route = createFileRoute("/")({
-	component: App,
+  component: ContainerDemo,
 });
 
-function App() {
-	return (
-		<div className="text-center">
-			<header className="min-h-screen flex flex-col items-center justify-center bg-[#282c34] text-white text-[calc(10px+2vmin)]">
-				<img
-					src={logo}
-					className="h-[40vmin] pointer-events-none animate-[spin_20s_linear_infinite]"
-					alt="logo"
-				/>
-				<p>
-					Edit <code>src/routes/index.tsx</code> and save to reload.
-				</p>
-				<a
-					className="text-[#61dafb] hover:underline"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-				<a
-					className="text-[#61dafb] hover:underline"
-					href="https://tanstack.com"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn TanStack
-				</a>
-			</header>
-		</div>
-	);
+function ContainerDemo() {
+  return (
+    <div className="min-h-screen bg-background p-8">
+      <h1 className="mb-8 text-3xl font-bold">Container Query Demo</h1>
+      
+      <div className="space-y-8">
+        {/* Small container */}
+        <section>
+          <h2 className="mb-4 text-xl font-semibold">Small Container (300px)</h2>
+          <div className="w-[300px] border border-dashed border-muted-foreground p-4">
+            <ProductCard />
+          </div>
+        </section>
+
+        {/* Medium container */}
+        <section>
+          <h2 className="mb-4 text-xl font-semibold">Medium Container (500px)</h2>
+          <div className="w-[500px] border border-dashed border-muted-foreground p-4">
+            <ProductCard />
+          </div>
+        </section>
+
+        {/* Large container */}
+        <section>
+          <h2 className="mb-4 text-xl font-semibold">Large Container (800px)</h2>
+          <div className="w-[800px] border border-dashed border-muted-foreground p-4">
+            <ProductCard />
+          </div>
+        </section>
+
+        {/* Full width container */}
+        <section>
+          <h2 className="mb-4 text-xl font-semibold">Full Width Container</h2>
+          <div className="border border-dashed border-muted-foreground p-4">
+            <ProductCard />
+          </div>
+        </section>
+      </div>
+    </div>
+  );
 }
