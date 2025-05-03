@@ -1,6 +1,6 @@
 {
-  "short_name": "TanStack App",
-  "name": "Create TanStack App Sample",
+  "short_name": "Tailwind Container Demo",
+  "name": "Tailwind Container Demo",
   "icons": [
     {
       "src": "favicon.ico",
