@@ -49,6 +49,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+
+      - name: Set environment variables
+        run: echo ${{ env.VITE_BASE_PATH }}
+
       - name: Build
         run: pnpm build
         env:
