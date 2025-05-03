@@ -1,5 +1,5 @@
 import { Button } from "./ui/button"
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "./ui/card"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
 
 interface ProductCardProps {
   name?: string;
@@ -8,18 +8,18 @@ interface ProductCardProps {
 export function ProductCard({ name = "Smart Watch" }: ProductCardProps) {
   return (
     <div className="@container">
-      <Card>
-        <div className="flex flex-col @md:flex-row">
-          <div className="relative h-48 @md:h-auto @md:w-48">
+      <Card className="py-0">
+        <div className="flex flex-col @lg:flex-row">
+          <div className="relative h-48 @lg:h-auto @lg:w-48">
             <img
               alt={name}
-              className="h-full w-full rounded-t-lg object-cover @md:rounded-l-lg @md:rounded-t-none"
+              className="h-full w-full rounded-t-lg @lg:rounded-l-lg @lg:rounded-t-none object-cover"
               src="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
             />
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col py-4 gap-4">
             <CardHeader>
-              <CardTitle className="text-lg @md:text-xl">{name}</CardTitle>
+              <CardTitle className="text-lg @lg:text-xl">{name}</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">
